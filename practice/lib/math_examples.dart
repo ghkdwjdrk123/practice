@@ -139,7 +139,7 @@ int strengthen(int level) {
           destFlg = 1;
         }
       }
-      if (destFlg == 0 && (level != 15 || level != 20)) {
+      if (destFlg == 0 && level != 15 && level != 20) {
         level--;
         print('강화 실패... 강화 단계가 1단계 떨어집니다.');
         minusCnt++;
@@ -157,6 +157,8 @@ int strengthen(int level) {
       if (TwentyTwoSuc <= randomNumber && randomNumber < TwentyTwoSuc + TwentyTwoDest && destFlg == 0) {
         level = 12;
         print('아이템이 파괴되었습니다. 스타포스 12성으로 돌아갑니다...');
+
+        destFlg = 1;
       }
       if (destFlg == 0) {
         level--;
@@ -174,6 +176,8 @@ int strengthen(int level) {
       if (TwentyThreeSuc <= randomNumber && randomNumber < TwentyThreeSuc + TwentyThreeDest) {
         level = 12;
         print('아이템이 파괴되었습니다. 스타포스 12성으로 돌아갑니다...');
+
+        destFlg = 1;
       }
       if (destFlg == 0) {
         level--;
@@ -191,6 +195,8 @@ int strengthen(int level) {
       if (TwentyFourSuc <= randomNumber && randomNumber < TwentyFourSuc + TwentyFourDest) {
         level = 12;
         print('아이템이 파괴되었습니다. 스타포스 12성으로 돌아갑니다...');
+
+        destFlg = 1;
       }
       if (destFlg == 0) {
         level--;
